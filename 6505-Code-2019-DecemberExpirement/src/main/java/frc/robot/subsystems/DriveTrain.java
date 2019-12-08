@@ -50,9 +50,9 @@ public class DriveTrain extends Subsystem {
    * @param leftInput power sent to left wheels, scale [0,1]
    * @param rightInput power sent to right wheels, scale [0,1]
    */
-  public void moveForwards(double leftInput, double rightInput) {
+  public void moveBasic(double leftInput, double rightInput) {
     leftMotorGroup.set(leftInput);
     rightMotorGroup.set(rightInput);
   }
 }
-}
+

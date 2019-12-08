@@ -1,5 +1,5 @@
 /*----------------------------------------------------------------------------*/
-/* Copyright (c) 2017-2018 FIRST. All Rights Reserved.                        */
+/* Copyright (c) 2018 FIRST. All Rights Reserved.                             */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
 /* must be accompanied by the FIRST BSD license file in the root directory of */
 /* the project.                                                               */
@@ -7,16 +7,21 @@
 
 package frc.robot.commands;
 
+//Wpilibj stuff
 import edu.wpi.first.wpilibj.command.Command;
+
+//Our robot stuff
+import frc.robot.RobotMap;
 import frc.robot.Robot;
 
 /**
- * An example command.  You can replace me with your own command.
+ * Moves drivetrain according to DifferentialDrive.
  */
-public class ExampleCommand extends Command {
-  public ExampleCommand() {
+public class Drive extends Command {
+  public Drive() {
     // Use requires() here to declare subsystem dependencies
-    requires(Robot.m_subsystem);
+    // eg. requires(chassis);
+    requires(Robot.driveTrain);
   }
 
   // Called just before this Command runs the first time
@@ -27,6 +32,9 @@ public class ExampleCommand extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
+    double leftStickY = Robot.m_oi.returnAxisValue(RobotMap.LEFT_STICK_Y);
+    double rightStickY = Robot.m_oi.returnAxisValue(RobotMap.RIGHT_STICK_Y);
+    Robot.driveTrain.drive(leftStickY, rightStickY);
   }
 
   // Make this return true when this Command no longer needs to run execute()
@@ -38,6 +46,7 @@ public class ExampleCommand extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
+    Robot.driveTrain.drive(0,0);
   }
 
   // Called when another command which requires one or more of the same

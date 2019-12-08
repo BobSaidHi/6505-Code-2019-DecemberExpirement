@@ -27,4 +27,9 @@ public class RobotMap {
   // for Drivetrain
   public static final int LEFT_MOTOR_1_ID = 0;
   public static final int RIGHT_MOTOR_1_ID = 1;
+
+  // Controller IDs and such
+  public static final int CONTROLLER_PORT_ID = 0;
+  public static final int LEFT_STICK_Y = 0;
+  public static final int RIGHT_STICK_Y = 0;
 }
