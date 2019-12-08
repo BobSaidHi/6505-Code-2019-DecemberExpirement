@@ -22,5 +22,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: cd "6505-Code-2019-DecemberExpirement"
-      reun: gradlew.bat
+      run: |
+        cd "6505-Code-2019-DecemberExpirement"
+        gradlew.bat
