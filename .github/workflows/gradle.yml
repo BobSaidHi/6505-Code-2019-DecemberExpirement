@@ -24,4 +24,5 @@ jobs:
     - name: Build with Gradle
       run: |
         cd "6505-Code-2019-DecemberExpirement"
-        gradlew.bat
+        dir
+        gradlew
