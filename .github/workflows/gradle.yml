@@ -25,4 +25,4 @@ jobs:
       run: |
         cd "6505-Code-2019-DecemberExpirement"
         dir
-        .\gradlew.bat
+        .\gradlew.bat build
