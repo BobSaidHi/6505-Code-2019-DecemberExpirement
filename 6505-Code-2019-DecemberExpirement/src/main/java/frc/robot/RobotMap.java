@@ -28,6 +28,11 @@ public class RobotMap {
   public static final int LEFT_MOTOR_1_ID = 0;
   public static final int RIGHT_MOTOR_1_ID = 1;
 
+  // for Arm subsystem
+  public static final int ARM_MOTOR_ID = 2;
+  public static final int SUCC_MOTOR_LEFT_ID = 3;
+  public static final int SUCC_MOTOR_RIGHT_ID = 4;
+  
   // Controller IDs and such
   public static final int CONTROLLER_PORT_ID = 0;
   public static final int LEFT_STICK_Y = 0;
