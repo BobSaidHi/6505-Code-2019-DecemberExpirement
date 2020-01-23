@@ -7,20 +7,19 @@
 
 package frc.robot.subsystems;
 
-//Defualt
+// Defualt
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-//Our robot
+// Our robot
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 
-//Predevined sutff
+// Predevined sutff
 import frc.robot.RobotMap;
 import frc.robot.commands.Drive;
 
 /**
- * Wrapper drivetrain module that allows manual motor controls
- * in parallel with DifferentialDrive.
+ * Wrapper drivetrain module that allows manual motor controls in parallel with DifferentialDrive.
  */
 public class DriveTrain extends Subsystem {
   // Put methods for controlling this subsystem
@@ -38,6 +37,7 @@ public class DriveTrain extends Subsystem {
 
   /**
    * Wrapper for DifferentialDrive. Use as usual.
+   *
    * @param leftInput forwards movement, scale [0,1]
    * @param rightInput rotation, scale [0,1]
    */
@@ -47,6 +47,7 @@ public class DriveTrain extends Subsystem {
 
   /**
    * Manual motor control.
+   *
    * @param leftInput power sent to left wheels, scale [0,1]
    * @param rightInput power sent to right wheels, scale [0,1]
    */
@@ -55,4 +56,3 @@ public class DriveTrain extends Subsystem {
     rightMotorGroup.set(rightInput);
   }
 }
-

@@ -7,16 +7,14 @@
 
 package frc.robot.commands;
 
-//Wpilibj stuff
+// Wpilibj stuff
 import edu.wpi.first.wpilibj.command.Command;
 
-//Our robot stuff
+// Our robot stuff
 import frc.robot.RobotMap;
 import frc.robot.Robot;
 
-/**
- * Moves drivetrain according to DifferentialDrive.
- */
+/** Moves drivetrain according to DifferentialDrive. */
 public class Drive extends Command {
   public Drive() {
     // Use requires() here to declare subsystem dependencies
@@ -26,8 +24,7 @@ public class Drive extends Command {
 
   // Called just before this Command runs the first time
   @Override
-  protected void initialize() {
-  }
+  protected void initialize() {}
 
   // Called repeatedly when this Command is scheduled to run
   @Override
@@ -46,12 +43,11 @@ public class Drive extends Command {
   // Called once after isFinished returns true
   @Override
   protected void end() {
-    Robot.driveTrain.drive(0,0);
+    Robot.driveTrain.drive(0, 0);
   }
 
   // Called when another command which requires one or more of the same
   // subsystems is scheduled to run
   @Override
-  protected void interrupted() {
-  }
+  protected void interrupted() {}
 }
